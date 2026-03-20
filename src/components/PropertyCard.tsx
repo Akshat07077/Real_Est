@@ -10,7 +10,7 @@ export function PropertyCard({ property }: { property: PropertyResponse }) {
     || `https://picsum.photos/seed/${property.id}/600/400`;
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
+    <Link href={`/properties/${property.id}`} className="group relative flex flex-col overflow-hidden rounded-2xl bg-card shadow-sm border border-border/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={primaryImage}
@@ -73,13 +73,11 @@ export function PropertyCard({ property }: { property: PropertyResponse }) {
         </div>
 
         <div className="mt-auto">
-          <Link href={`/properties/${property.id}`} className="block">
-            <button className="w-full rounded-xl bg-primary/5 px-4 py-2.5 text-sm font-semibold text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground cursor-pointer">
-              View Details
-            </button>
-          </Link>
+          <div className="w-full rounded-xl bg-primary/5 px-4 py-2.5 text-sm font-semibold text-primary text-center transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+            View Details
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

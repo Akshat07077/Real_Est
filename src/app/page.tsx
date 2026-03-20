@@ -170,6 +170,105 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Reviews / Testimonials */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="font-display text-4xl font-bold text-foreground mb-4">What Our Clients Say</h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              Thousands of happy families found their dream home through LuxeEstate Indore.
+            </p>
+            <div className="flex items-center justify-center gap-1 mt-4">
+              {[1,2,3,4,5].map(i => (
+                <svg key={i} className="w-5 h-5 text-accent fill-accent" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              ))}
+              <span className="ml-2 text-sm font-semibold text-foreground">4.9 / 5</span>
+              <span className="ml-1 text-sm text-muted-foreground">(200+ reviews)</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Rahul & Neha Gupta",
+                location: "Vijay Nagar, Indore",
+                initials: "RG",
+                color: "bg-blue-500",
+                rating: 5,
+                text: "LuxeEstate made our home buying journey completely stress-free. Rajesh bhai was always available, explained every detail patiently, and helped us get the best deal on our 3 BHK. Highly recommended!",
+                property: "3 BHK in Super Corridor",
+              },
+              {
+                name: "Sunita Agarwal",
+                location: "Palasia, Indore",
+                initials: "SA",
+                color: "bg-purple-500",
+                rating: 5,
+                text: "मैंने LuxeEstate से अपना फ्लैट किराए पर लिया। Priya ji ने बहुत अच्छी सर्विस दी। सब कुछ transparent था और कोई hidden charges नहीं थे। बहुत अच्छा अनुभव रहा।",
+                property: "2 BHK Rental in Palasia",
+              },
+              {
+                name: "Vikram Malhotra",
+                location: "AB Road, Indore",
+                initials: "VM",
+                color: "bg-emerald-500",
+                rating: 5,
+                text: "Invested in a commercial property through LuxeEstate. Amit Verma gave excellent market insights and the ROI has been fantastic. Their knowledge of Indore's real estate market is unmatched.",
+                property: "Commercial Space, Sarafa",
+              },
+              {
+                name: "Pooja & Deepak Sharma",
+                location: "Scheme 78, Indore",
+                initials: "PS",
+                color: "bg-rose-500",
+                rating: 5,
+                text: "We were first-time home buyers and were quite nervous. The team at LuxeEstate held our hand through the entire process — from site visits to registration. Couldn't have asked for better support.",
+                property: "2 BHK in Bypass Road Township",
+              },
+              {
+                name: "Ankit Jain",
+                location: "Nipania, Indore",
+                initials: "AJ",
+                color: "bg-amber-500",
+                rating: 4,
+                text: "Got a great builder floor in Nipania at a very competitive price. The vastu consultation they arranged was a bonus. Quick documentation and smooth handover. Will definitely use them again.",
+                property: "3 BHK Builder Floor, Nipania",
+              },
+              {
+                name: "Meera Tiwari",
+                location: "Mhow Road, Indore",
+                initials: "MT",
+                color: "bg-teal-500",
+                rating: 5,
+                text: "Bought a farmhouse through LuxeEstate and the experience was exceptional. They arranged multiple site visits, negotiated well on our behalf, and the post-sale support has been wonderful too.",
+                property: "Farmhouse, Mhow Road",
+              },
+            ].map((review) => (
+              <div key={review.name} className="bg-card rounded-2xl border border-border/50 p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <svg key={i} className={`w-4 h-4 ${i < review.rating ? 'text-accent fill-accent' : 'text-muted fill-muted'}`} viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">&ldquo;{review.text}&rdquo;</p>
+                <div className="text-xs text-accent font-medium">{review.property}</div>
+                <div className="flex items-center gap-3 pt-2 border-t border-border/50">
+                  <div className={`w-9 h-9 rounded-full ${review.color} flex items-center justify-center text-white text-xs font-bold shrink-0`}>
+                    {review.initials}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{review.name}</p>
+                    <p className="text-xs text-muted-foreground">{review.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
