@@ -16,7 +16,10 @@ export function Footer() {
               </span>
             </div>
             <p className="max-w-xs text-sm text-primary-foreground/70">
-              Redefining luxury real estate with unparalleled service, exclusive listings, and a commitment to excellence.
+              Indore की सबसे भरोसेमंद रियल एस्टेट कंपनी। प्रीमियम प्रॉपर्टी, बेहतरीन सेवा।
+            </p>
+            <p className="max-w-xs text-sm text-primary-foreground/70">
+              Redefining luxury real estate in Madhya Pradesh with unparalleled service and exclusive listings.
             </p>
           </div>
           <div>
@@ -24,21 +27,23 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
               <li><Link href="/properties" className="hover:text-accent transition-colors">Properties</Link></li>
-              <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+              <li><Link href="/contact" className="hover:text-accent transition-colors">Contact Us</Link></li>
+              <li><Link href="/login" className="hover:text-accent transition-colors">Broker Login</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-display mb-4 text-lg font-semibold">Contact</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li>123 Luxury Ave, Suite 500</li>
-              <li>New York, NY 10001</li>
-              <li>contact@luxeestate.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>📍 204, Scheme No. 54, Vijay Nagar</li>
+              <li>Indore, Madhya Pradesh – 452010</li>
+              <li>📧 info@luxeestate.in</li>
+              <li>📞 +91 98765 43210</li>
+              <li>🕐 Mon–Sat: 10:00 AM – 7:00 PM</li>
             </ul>
           </div>
         </div>
         <div className="mt-16 border-t border-primary-foreground/10 pt-8 text-center text-sm text-primary-foreground/50">
-          <p>&copy; {new Date().getFullYear()} LuxeEstate. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LuxeEstate India. All rights reserved. | RERA Reg. No. MP/RERA/2024/001</p>
         </div>
       </div>
     </footer>

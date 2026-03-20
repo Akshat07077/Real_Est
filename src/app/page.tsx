@@ -102,7 +102,7 @@ export default async function HomePage() {
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="h-14 px-8 text-base rounded-xl border-white/30 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="h-14 px-8 text-base rounded-xl border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60">
                   Contact Us <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
