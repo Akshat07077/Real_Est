@@ -16,7 +16,8 @@ export const metadata = {
 export const revalidate = 60; // Revalidate every minute
 
 export default async function HomePage() {
-  let featuredProperties = [];
+  type PropertyRow = typeof propertiesTable.$inferSelect;
+  let featuredProperties: PropertyRow[] = [];
   try {
     featuredProperties = await db
       .select()
