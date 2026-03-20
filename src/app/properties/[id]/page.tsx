@@ -309,8 +309,8 @@ export default async function PropertyDetailPage({
               </div>
             )}
 
-            {/* EMI Calculator — client component */}
-            <PropertyDetailClient price={price} />
+            {/* EMI Calculator — only for sale properties */}
+            {property.type === "sale" && <PropertyDetailClient price={price} />}
           </div>
 
           {/* ── RIGHT / SIDEBAR ── */}
