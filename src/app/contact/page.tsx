@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
+import { ContactForm } from "./ContactForm";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata = {
   title: "Contact Us — LuxeEstate India",
@@ -86,74 +87,7 @@ export default function ContactPage() {
             <p className="text-muted-foreground mb-8 text-sm">
               Fill in the form and our team will get back to you within 24 hours.
             </p>
-            <form className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium block mb-1.5">Full Name *</label>
-                  <input
-                    type="text"
-                    placeholder="e.g. Rahul Gupta"
-                    className="w-full h-11 rounded-xl border border-border bg-muted/30 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 transition"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm font-medium block mb-1.5">Mobile Number *</label>
-                  <input
-                    type="tel"
-                    placeholder="+91 98765 XXXXX"
-                    className="w-full h-11 rounded-xl border border-border bg-muted/30 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 transition"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium block mb-1.5">Email Address</label>
-                <input
-                  type="email"
-                  placeholder="rahul@example.com"
-                  className="w-full h-11 rounded-xl border border-border bg-muted/30 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 transition"
-                />
-              </div>
-              <div>
-                <label className="text-sm font-medium block mb-1.5">I&apos;m looking for</label>
-                <select className="w-full h-11 rounded-xl border border-border bg-muted/30 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 transition">
-                  <option value="">Select requirement</option>
-                  <option value="buy">Buy a Property</option>
-                  <option value="rent">Rent a Property</option>
-                  <option value="sell">Sell my Property</option>
-                  <option value="invest">Investment Advice</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="text-sm font-medium block mb-1.5">Budget Range</label>
-                <select className="w-full h-11 rounded-xl border border-border bg-muted/30 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 transition">
-                  <option value="">Select budget</option>
-                  <option>Under ₹25 Lakh</option>
-                  <option>₹25 – ₹50 Lakh</option>
-                  <option>₹50 Lakh – ₹1 Crore</option>
-                  <option>₹1 Crore – ₹3 Crore</option>
-                  <option>Above ₹3 Crore</option>
-                </select>
-              </div>
-              <div>
-                <label className="text-sm font-medium block mb-1.5">Message</label>
-                <textarea
-                  rows={4}
-                  placeholder="Tell us about your requirements — location preference, BHK, possession timeline..."
-                  className="w-full rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 transition resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
-              >
-                <MessageSquare size={18} />
-                Send Inquiry
-              </button>
-              <p className="text-xs text-muted-foreground text-center">
-                By submitting, you agree to be contacted by our team. We respect your privacy.
-              </p>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Right side — info + agents */}

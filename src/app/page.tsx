@@ -2,6 +2,7 @@ import { db } from "@/lib/db";
 import { propertiesTable } from "@/lib/db/schema";
 import { eq, desc } from "drizzle-orm";
 import { PropertyCard } from "@/components/PropertyCard";
+import { HeroSearch } from "@/components/HeroSearch";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -95,15 +96,12 @@ export default async function HomePage() {
               Explore the most exclusive luxury properties in prime locations. Elevate your lifestyle with LuxeEstate.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link href="/properties">
-                <Button size="lg" className="h-14 px-8 text-base rounded-xl bg-accent text-white hover:bg-accent/90">
-                  <Search className="mr-2" size={20} /> Explore Properties
-                </Button>
-              </Link>
+            <HeroSearch />
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="h-14 px-8 text-base rounded-xl border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60">
-                  Contact Us <ArrowRight className="ml-2" size={18} />
+                <Button size="lg" variant="outline" className="h-12 px-6 text-sm rounded-xl border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60">
+                  Contact Us <ArrowRight className="ml-2" size={16} />
                 </Button>
               </Link>
             </div>

@@ -244,6 +244,7 @@ const properties = [
     type: "sale",
     propertyType: "apartment",
     status: "active",
+    
     bedrooms: 2,
     bathrooms: 2,
     area: "1050",
