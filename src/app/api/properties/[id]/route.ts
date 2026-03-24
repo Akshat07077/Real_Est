@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { propertiesTable } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
-
 export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }

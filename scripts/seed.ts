@@ -59,7 +59,7 @@ const properties = [
     bedrooms: 2,
     bathrooms: 2,
     area: "1100",
-    location: "Palasia, Indore",
+    location: "indore, Plasaia"    
     address: "Flat 8B, Shalimar Township, Palasia",
     city: "Indore",
     country: "India",
@@ -121,6 +121,8 @@ const properties = [
     nearbyMetro: "Super Corridor BRTS",
     nearbySchool: "Emerald Heights International School",
     nearbyHospital: "Medanta Hospital, Indore",
+    nearyHospital: "tehre are many hospital"
+
   },
 
   // ── ADDITIONAL INDIAN PROPERTIES ──
